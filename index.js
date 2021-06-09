@@ -1,5 +1,10 @@
 // look at html.index and plan what the page looks like when it loads
-//
+//switch between html and js as you work
+//maybe look at some projects and deconstruct them to see how youd like your own to look
+
+
+//ask Jenn about setting your btns in your header. Specifically "show info btn" "hide info btn"
+// would i put it in the header? if so would i span the header and add it?
 
 
 // The user will have a button that shows additional information about each character from the API
