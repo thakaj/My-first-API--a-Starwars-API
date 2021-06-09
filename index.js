@@ -2,9 +2,11 @@
 //switch between html and js as you work
 //maybe look at some projects and deconstruct them to see how youd like your own to look
 
-
+//notes to ask Jenn!!!
 //ask Jenn about setting your btns in your header. Specifically "show info btn" "hide info btn"
 // would i put it in the header? if so would i span the header and add it?
+//why isnt my CSS showing up on my page? I probably havent linked it correctlly=> ask how to link correctly => check with her to see if JS is linked correctly
+//totally ripped my css from the liker app project ask her about the effiacy of this before keeping it...
 
 
 // The user will have a button that shows additional information about each character from the API
