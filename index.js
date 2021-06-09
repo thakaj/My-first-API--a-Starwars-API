@@ -1,4 +1,19 @@
+// look at html.index and plan what the page looks like when it loads
+//
+
+
 // The user will have a button that shows additional information about each character from the API
+//define the api
+const api = "https://swapi.dev/api/people/"
+// define an async function to fetch the data display characters to dom
+async function fetchAPI(){
+    fetch("https://swapi.dev/api/people/")
+    .then(resp => resp.json())
+    .then(resp => {
+        console.log(data)
+    })
+}   //find out what data type im using. Might get quized on it
+
 //event listener 1: when the user clicks a button on the page additional information is showed
 //When the character info is shown there is a hide button
 //event listener 2: when the user clicks a button the information is hidden 
