@@ -16,23 +16,60 @@
 
 function characterInfo(arrayObjects){
     arrayObjects.forEach(character => {
-        console.log(character.name)
         //create a div element and save it as an element
         //set that div elements innerhtml  => interpolate the data
         //appened it to the container div
         const newDiv = document.createElement("article")
         newDiv.setAttribute("class", "content-block")
-        const newContent = document.createTextNode(character.name)
-        newDiv.appendChild(newContent)
-        document.getElementById("character").appendChild(newDiv);
+        newDiv.innerHTML = `
+            <h2>${character.name} <button id= "btn">Use the force!</button> </h2>
+            <div id= "hide-div">
+            <article> Height: ${character.height}
+            <div>
+            Mass: ${character.mass}
+            </div>
+            <div>
+            Hair Color: ${character.hair_color}
+            </div>
+            <div>
+            Hair Color: ${character.skin_color}
+            </div>
+            <div>
+            Hair Color: ${character.eye_color}
+            </div>
+            <div>
+            Hair Color: ${character.bith_year}
+            </div>
+            <div>
+            Hair Color: ${character.gender}
+            </div>
+            <div>
+            <footer>
+                <span class= "like-btn">Like this character! &#x2661;</span>
+            </footer>
+            </div>
+            </article>
+            </div>
+            `
+        document.getElementById("character").appendChild(newDiv)
+        //could search doc. ill get multiple btn
+        //querselector very cool. can call on div
+        //newDiv.queryselector => event listner
     });
 }
 
 
+
+
+
+//create a button and append. can append all day
+//instead innertext user innerHTml because u can write everything inside of a string
+//
+
+
+
 // The user will have a button that shows additional information about each character from the API
 //define the api
-
-const api = "https://swapi.dev/api/people/"
 
 function fetchApi(){
     fetch("https://swapi.dev/api/people/")
