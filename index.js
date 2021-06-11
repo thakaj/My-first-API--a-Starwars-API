@@ -20,12 +20,15 @@ function characterInfo(arrayObjects){
         //create a div element and save it as an element
         //set that div elements innerhtml  => interpolate the data
         //appened it to the container div
-
+        const newDiv = document.createElement("article")
+        newDiv.setAttribute("class", "content-block")
+        const newContent = document.createTextNode(character.name)
+        newDiv.appendChild(newContent)
+        document.getElementById("character").appendChild(newDiv);
     });
 }
 
 
-const newDiv = document.querySelector('character-name')
 // The user will have a button that shows additional information about each character from the API
 //define the api
 
