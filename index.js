@@ -27,9 +27,6 @@ function characterInfo(arrayObjects){
             Hair Color: ${character.gender}
             </div>
             <div>
-            <footer>
-                <span class= "like-btn">Like this character! &#x2661;</span>
-            </footer>
             </div>
             </article>
             </div>
@@ -54,7 +51,12 @@ showBtn.addEventListener('click',function infoDisplay(click){
     }
 })
 
-
+const submitBtn = document.getElementById("submitButton")
+submitBtn.addEventListener('click',function submitText(){
+    let value = document.getElementById("text-box").value;
+    let commentDiv = document.getElementById("comments")
+    commentDiv.innerHTML += value + " -Anonymous<br>"
+})
 
 
 
@@ -65,7 +67,6 @@ function fetchApi(){
     .then(resp => characterInfo(resp.results))
 }   
 fetchApi()
-const forceButton = document.querySelector("force-button")
 
 
 

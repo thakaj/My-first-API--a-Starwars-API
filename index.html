@@ -12,26 +12,24 @@
 <body>
 
     <div>
-    <h1>Star Wars Character Bio <button class="btn" id ="hide-btn">Use the force!</button></h1>
+    <h1>Star Wars Character Bio <button class="btn" id ="hide-btn">Use the force to see less!</button></h1>
     </div>
 <div id ="character"></div>
 
     <div>
-    <header>
+    <footer>
         <div id ="character-name"> <button class ="force-button" id ="show-btn">Use the force to see more!</button></div>
-    </header>
+        <article class = "content-block">
+    </footer>
     </div>
-
     <div>
-    <article class = "content-block">
-        <p>Data from the API about the Character</p>
-        <footer>
-            <ul>
-                <li>Like this character! <span class= "like-btn">&#x2661;</span></li>
-                </ul>
-            </footer>
-        </article>
-    </div>
+    <b> Comments: </b>
+    <div id="comments"></div>
+    <input type="text" id="text-box"  value="" />
+    <br/>
+    
+    <button id="submitButton" >Submit Response</button>
+</div>
     
     <script src="index.js"></script>        
 </body>
