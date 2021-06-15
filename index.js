@@ -1,12 +1,10 @@
 
 function characterInfo(arrayObjects){
-    let counter = 0;
     arrayObjects.forEach(character => {
         const newDiv = document.createElement("article")
         newDiv.setAttribute("class", "content-block")
         newDiv.innerHTML = `
             <h2>${character.name}</h2>
-            <div id = "${counter}">
             <article> Height: ${character.height}
             <div>
             Mass: ${character.mass}
@@ -15,21 +13,18 @@ function characterInfo(arrayObjects){
             Hair Color: ${character.hair_color}
             </div>
             <div>
-            Hair Color: ${character.skin_color}
+            Skin Color: ${character.skin_color}
             </div>
             <div>
-            Hair Color: ${character.eye_color}
+            Eye Color: ${character.eye_color}
             </div>
             <div>
-            Hair Color: ${character.bith_year}
+            Birth Year: ${character.birth_year}
             </div>
             <div>
-            Hair Color: ${character.gender}
-            </div>
-            <div>
+            Gemder: ${character.gender}
             </div>
             </article>
-            </div>
             `
         document.getElementById("character").appendChild(newDiv)
     });
@@ -60,25 +55,9 @@ submitBtn.addEventListener('click',function submitText(){
 
 
 
-
 function fetchApi(){
     fetch("https://swapi.dev/api/people/")
     .then(resp => resp.json())
     .then(resp => characterInfo(resp.results))
 }   
 fetchApi()
-
-
-
-
-
-
-
-
-
-//event listener 1: when the user clicks a button on the page additional information is showed
-//When the character info is shown there is a hide button
-//event listener 2: when the user clicks a button the information is hidden 
-//the user will be able to click a like button on each characters profile
-//event listener 3: when the user clicks a button there is an active response on the page
-//stretch goal: add a comments section for users to leave anonomyus comments
